@@ -18,6 +18,13 @@ Route::get('/', function () {
 });
 
 
-Route::get('/Basic',function(){
-    return view('Basic_Blade');
+
+Route::prefix('Blade')->group(function(){
+    Route::get('/Basic',function(){
+        return view('Basic_Blade');
+    });
+
+    Route::get('/Inter_Blade', function(){
+        return view('Intermidiate_Blade');
+    });
 });
