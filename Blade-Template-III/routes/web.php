@@ -12,24 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
-    return view('welcome');
+     return view('welcome');
 });
 
-
-
-Route::prefix('Blade')->group(function(){
-    Route::get('/Basic',function(){
-        return view('Basic_Blade');
-    });
-
-    Route::get('/Inter_Blade', function(){
-        return view('Intermidiate_Blade');
-    });
-});
-
-
-Route::get('/Reusable',function(){
-    return view('ReusableTemplates');
+Route::get('/Home',function(){
+    return view('index');
 });
