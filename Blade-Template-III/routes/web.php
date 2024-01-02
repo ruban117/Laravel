@@ -16,6 +16,18 @@ Route::get('/', function () {
      return view('welcome');
 });
 
-Route::get('/Home',function(){
-    return view('index');
+Route::get('/Master',function(){
+    return view('masterlayout');
+});
+
+Route::get('/about',function(){
+    return view('about');
+});
+
+Route::get('/home',function(){
+    return view('home');
+});
+
+Route::get('/post',function(){
+    return view('post');
 });
