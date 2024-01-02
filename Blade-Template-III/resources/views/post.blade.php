@@ -8,3 +8,8 @@
 @section('title')
     Post Page
 @endsection
+
+@section('sidebar')
+@parent
+<p>This Is Our New Content</p>
+@endsection

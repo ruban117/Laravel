@@ -22,15 +22,21 @@
     <div class="content flex h-80">
       <div class="content w-[80%] space-x-4 space-y-8">
         <p></p>
-        @yield('content')
+        @hasSection('content')
+          @yield('content')
+          @else
+            <h2>No Content Found</h2>
+        @endif
       </div>
       <div class="content bg-yellow-300 w-[20%]">
-        <ul class="space-x-8 space-y-4 list-disc font-bold">
-          <p></p>
-          <li><a href="/home" class="underline">Home</a></li>
-          <li><a href="/about" class="underline">About</a></li>
-          <li><a href="/post" class="underline">Post</a></li>
-        </ul>
+        @section('sidebar')
+          <ul class="space-x-8 space-y-4 list-disc font-bold">
+            <p></p>
+            <li><a href="/home" class="underline">Home</a></li>
+            <li><a href="/about" class="underline">About</a></li>
+            <li><a href="/post" class="underline">Post</a></li>
+          </ul>
+        @show
       </div>
     </div>
 
