@@ -12,7 +12,8 @@
     {!! $alert  !!} --}}
 
     @foreach ($user as $id=>$v)
-        <p>Id:- {{ $id }} | Name:- {{ $v['name'] }} | Contact:- {{ $v['phone'] }} | City:- {{ $v['city'] }}</p>
+        <p>Id:- {{ $id }} | Name:- {{ $v['name'] }} | Contact:- {{ $v['phone'] }} | City:- {{ $v['city'] }}
+        <a href="{{ route('users.view',$id) }}">Show</a></p>
     @endforeach
 
 </body>
