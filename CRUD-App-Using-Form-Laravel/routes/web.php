@@ -18,10 +18,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/crud',[UserController::class,'viewUsers'])->name('viewuser');
+Route::controller(UserController::class)->group(function(){
+    Route::get('/crud','viewUsers')->name('viewuser');
 
-Route::get('/crud/add',function(){return view('add');})->name('adduser');
+    Route::post('/add','addUsers')->name('insert');
 
-Route::post('/add',[UserController::class,'addUsers'])->name('insert');
+    Route::get('/delete/{id}','DeleteUser')->name('delete');
 
-Route::get('/delete/{id}',[UserController::class,'DeleteUser'])->name('delete');
+    Route::get('/updateuser/{id}','UpdateUserView')->name('updateview');
+
+    Route::post('/update/{id}','UpdateUser')->name('Update');
+});
+
+
+
+
