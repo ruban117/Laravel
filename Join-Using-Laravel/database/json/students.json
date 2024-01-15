@@ -1,0 +1,27 @@
+[
+    {
+        "name":"Ruban Pathak",
+        "age":21,
+        "city_id":1
+    },
+    {
+        "name":"Saikat Datta",
+        "age":24,
+        "city_id":4
+    },
+    {
+        "name":"Sutam Paul",
+        "age":20,
+        "city_id":2
+    },
+    {
+        "name":"Arnab Debnath",
+        "age":20,
+        "city_id":1
+    },
+    {
+        "name":"Soumyadeep Mitra",
+        "age":22,
+        "city_id":5
+    }
+]
